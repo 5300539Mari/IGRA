@@ -78,8 +78,15 @@ body {
 }
 
 /* Start screen: logo as hero title (larger) */
+#startScreen .topbar {
+  height: auto;
+  min-height: 0;
+  padding-top: 0;
+  margin-top: 0;
+  justify-content: center;
+}
 #startScreen .barlive-logo {
-  margin-top: 8px;
+  margin-top: 0;
 }
 #startScreen .barlive-logo img {
   height: 95px;
@@ -95,10 +102,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 40px 16px;
-  gap: 32px;
+  justify-content: flex-start;
+  padding: 4px 16px 16px;
+  gap: 10px;
   text-align: center;
+}
+
+#startScreen .game-body {
+  padding-top: 0;
+  gap: 12px;
 }
 
 #startScreen.active { display: flex; }
@@ -775,6 +787,22 @@ body {
 @media (max-width: 480px) {
   .topbar { height: 58px; padding: 0 14px; }
   .barlive-logo img { height: 46px; }
+  #startScreen {
+    justify-content: flex-start;
+    padding-top: 4px;
+    gap: 14px;
+  }
+  #startScreen .topbar {
+    min-height: 70px;
+    padding-top: 2px;
+    margin-top: 0;
+  }
+  #startScreen .barlive-logo {
+    margin-top: 0;
+  }
+  #startScreen .barlive-logo img {
+    height: 64px;
+  }
   .game-body { gap: 8px; padding: 10px 12px; }
   .q-card { padding: 12px 14px; }
   .q-text { font-size: 13px; line-height: 1.4; }
