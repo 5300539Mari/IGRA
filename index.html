@@ -66,30 +66,18 @@ body {
 .barlive-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
   flex-shrink: 0;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 16px;
-  padding: 10px 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 .barlive-logo img {
-  height: 72px;
+  height: 64px;
   width: auto;
   display: block;
   flex-shrink: 0;
   object-fit: contain;
 }
 
-/* Start screen: logo as hero title (no background) */
-#startScreen .barlive-logo {
-  background: transparent;
-  border: none;
-  padding: 0;
-  box-shadow: none;
-}
+/* Start screen: logo as hero title (larger) */
 #startScreen .barlive-logo img {
   height: clamp(80px, 12vw, 140px);
 }
@@ -781,8 +769,7 @@ body {
 /* ── MOBILE: everything on one screen ─────── */
 @media (max-width: 480px) {
   .topbar { height: 58px; padding: 0 14px; }
-  .barlive-logo { padding: 8px 14px; border-radius: 12px; }
-  .barlive-logo img { height: 50px; }
+  .barlive-logo img { height: 46px; }
   .game-body { gap: 8px; padding: 10px 12px; }
   .q-card { padding: 12px 14px; }
   .q-text { font-size: 13px; line-height: 1.4; }
