@@ -78,6 +78,9 @@ body {
 }
 
 /* Start screen: logo as hero title (larger) */
+#startScreen .barlive-logo {
+  margin-top: 8px;
+}
 #startScreen .barlive-logo img {
   height: 95px;
   width: auto;
@@ -837,7 +840,7 @@ body {
     </div>
 
     <div class="stats-row">
-      <div class="stat-pill"><div class="n">15</div><div class="l">вопросов</div></div>
+      <div class="stat-pill"><div class="n">22</div><div class="l">вопросов</div></div>
       <div class="stat-pill"><div class="n">3</div><div class="l">подсказки</div></div>
       <div class="stat-pill"><div class="n">30с</div><div class="l">на ответ</div></div>
       <div class="stat-pill"><div class="n">∞</div><div class="l">попыток</div></div>
@@ -925,7 +928,7 @@ body {
         <div class="sc-l">✗ неверно</div>
       </div>
       <div class="score-card">
-        <div class="sc-n neutral" id="eTotal">15</div>
+        <div class="sc-n neutral" id="eTotal">22</div>
         <div class="sc-l">всего</div>
       </div>
     </div>
@@ -1307,7 +1310,7 @@ function endGame(){
   const cmt=document.getElementById('eCmt');
 
   const r=correct/activeQs.length;
-  if(r===1){     icon.textContent='🏆'; title.textContent='Идеальный результат!'; cmt.textContent='Все 15 вопросов — правильно! Вы настоящий эксперт по маркировке ресторанного бизнеса.'; }
+  if(r===1){     icon.textContent='🏆'; title.textContent='Идеальный результат!'; cmt.textContent='Все 22 вопроса — правильно! Вы настоящий эксперт по маркировке ресторанного бизнеса.'; }
   else if(r>=0.8){icon.textContent='🥇'; title.textContent='Отличный результат!'; cmt.textContent='Очень высокий уровень знаний. Пара вопросов вызвала затруднение — конференция 12 марта поможет разобраться в деталях.'; }
   else if(r>=0.6){icon.textContent='🥈'; title.textContent='Хороший результат!'; cmt.textContent='Базовые знания есть, но пробелы присутствуют. Приходите на конференцию — эксперты ответят на все вопросы.'; }
   else if(r>=0.4){icon.textContent='🥉'; title.textContent='Неплохое начало!'; cmt.textContent='Тема требует погружения. Эксперты из ЦРПТ, Честного знака, Сбера и Барлайв готовы помочь 12 марта.'; }
